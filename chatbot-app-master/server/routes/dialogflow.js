@@ -18,7 +18,7 @@ const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 // We will make two routes 
 
 
-// Text Query Route
+// Text Query Route  텍스트 
 
 router.post('/textQuery', async (req, res) => {
     //We need to send some information that comes from the client to Dialogflow API 
@@ -47,7 +47,7 @@ router.post('/textQuery', async (req, res) => {
 
 
 
-//Event Query Route
+//Event Query Route 이벤트
 
 router.post('/eventQuery', async (req, res) => {
     //We need to send some information that comes from the client to Dialogflow API 
@@ -72,6 +72,7 @@ router.post('/eventQuery', async (req, res) => {
     console.log(`  Response: ${result.fulfillmentText}`);
 
     res.send(result)
+    
 })
 
 
