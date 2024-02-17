@@ -19,7 +19,6 @@ const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 
 
 // Text Query Route  텍스트 
-
 router.post('/textQuery', async (req, res) => {
     //We need to send some information that comes from the client to Dialogflow API 
     // The text query request.
@@ -29,7 +28,7 @@ router.post('/textQuery', async (req, res) => {
             text: {
                 // The query to send to the dialogflow agent
                 text: req.body.text,
-                // The language used by the client (en-US)
+                // The language used by the client
                 languageCode: languageCode,
             },
         },
@@ -48,7 +47,6 @@ router.post('/textQuery', async (req, res) => {
 
 
 //Event Query Route 이벤트
-
 router.post('/eventQuery', async (req, res) => {
     //We need to send some information that comes from the client to Dialogflow API 
     // The text query request.
