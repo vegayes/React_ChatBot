@@ -47,16 +47,15 @@ router.post('/textQuery', async (req, res) => {
 
 
 //Event Query Route 이벤트
+/*
+ dialogflow -> Intent 생성 
+*/
 router.post('/eventQuery', async (req, res) => {
-    //We need to send some information that comes from the client to Dialogflow API 
-    // The text query request.
     const request = {
         session: sessionPath,
         queryInput: {
             event: {
-                // The query to send to the dialogflow agent
                 name: req.body.event,
-                // The language used by the client (en-US)
                 languageCode: languageCode,
             },
         },
